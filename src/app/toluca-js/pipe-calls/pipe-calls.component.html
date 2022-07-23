@@ -1,1 +1,22 @@
-<p>pipe-calls works!</p>
+<div>
+  <div>
+    <label for="hero-name">Pokemon : </label>
+    <input id="hero-name" [(ngModel)]="searchText" placeholder="Teclea el nombre o id">
+  </div>
+  <div>
+    <button type="button" (click)="buscar()" class="button1">Buscar</button>
+  </div>
+  <div>
+    <div><span>Buscaremos con el siguiente valor: </span>{{searchText}}</div>
+  </div>
+  <div>
+    <h2>Mi pokemon</h2>
+    <div *ngIf="pokemonFound">Nombre: <span>
+        <strong>{{pokemonFound.data.name}}</strong>
+      </span>
+    </div>
+    <div *ngIf="imageLoaded">
+      <img class="image" [src]="imageLoaded.src" alt="Place image title" />
+    </div>
+  </div>
+</div>

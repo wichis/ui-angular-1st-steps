@@ -6,11 +6,11 @@ import { PipeCallsComponent } from './toluca-js/pipe-calls/pipe-calls.component'
 
 const routes: Routes = [
   {
-    path: 'basic',
+    path: 'async',
     component: AsyncCallsComponent
   },
   {
-    path: 'forkjoin',
+    path: 'fork',
     component: ForkCallsComponent
   },
   {
